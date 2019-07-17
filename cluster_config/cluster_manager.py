@@ -168,6 +168,7 @@ def main():
         )
 
     sys.stdout.write(cluster.id)
+    os.environ['DATABRICKS_CLUSTER_ID'] = cluster.id
 
 
 if __name__ == '__main__':
