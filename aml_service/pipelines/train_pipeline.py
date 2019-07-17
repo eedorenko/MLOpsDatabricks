@@ -29,7 +29,7 @@ def get_experiment_run_url(
 
 
 def main():
-    cluster_id = os.environ.get("DATABRICKS_CLUSTER_ID", None)
+    cluster_id = os.environ.get("EXISTING_DATABRICKS_CLUSTER_ID", None)
     workspace_name = os.environ.get("AML_WORKSPACE_NAME", None)
     resource_group = os.environ.get("RESOURCE_GROUP", None)
     subscription_id = os.environ.get("SUBSCRIPTION_ID", None)
