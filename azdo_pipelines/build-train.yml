@@ -18,8 +18,11 @@ steps:
 
 - bash: |
    #Create Azure Databricks cluster
+   echo $DATABRICKS_CLUSTER_ID
    
    DATABRICKS_CLUSTER_ID=$(python3 $(Build.SourcesDirectory)/cluster_config/cluster_manager.py 2>&1 >/dev/null) 
+   
+   echo $DATABRICKS_CLUSTER_ID
    
    echo "##vso[task.setvariable variable=existing_databricks_cluster_id]$DATABRICKS_CLUSTER_ID"  
   env:
