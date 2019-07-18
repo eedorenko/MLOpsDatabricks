@@ -57,6 +57,7 @@ class DatabricksCluster:
             })
 
         if response.status_code == 200:
+            print(response.json())
             self.id = response.json()['cluster_id']
 
             self.get_state(databricks_token)
