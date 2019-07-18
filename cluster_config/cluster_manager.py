@@ -167,9 +167,8 @@ def main():
             args.permanent
         )
 
-    sys.stdout.write(cluster.id)
     print("The cluster id is %s" % (cluster.id))
-    os.environ["DATABRICKS_CLUSTER_ID"] = cluster.id
+    sys.exit(cluster.id)
 
 
 if __name__ == '__main__':
