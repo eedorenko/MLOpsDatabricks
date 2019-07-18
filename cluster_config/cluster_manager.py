@@ -26,7 +26,7 @@ def parse_arguments():
 
 
 def terminate_cluster(
-    cluster: DatabricksCluster,
+    cluster,
     databricks_access_token,
     libraries_config_path,
     permanent: bool
@@ -168,6 +168,7 @@ def main():
         )
 
     sys.stdout.write(cluster.id)
+    print("The cluster id is %s" % (cluster.id))
     os.environ["DATABRICKS_CLUSTER_ID"] = cluster.id
 
 

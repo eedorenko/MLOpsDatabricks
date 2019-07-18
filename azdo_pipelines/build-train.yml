@@ -20,13 +20,11 @@ steps:
    #Create Azure Databricks cluster
    echo $DATABRICKS_CLUSTER_ID
    
-   LOCAL_DATABRICKS_CLUSTER_ID=$(python3 $(Build.SourcesDirectory)/cluster_config/cluster_manager.py 2>&1 >/dev/null) 
+   export DATABRICKS_CLUSTER_ID=$(python3 $(Build.SourcesDirectory)/cluster_config/cluster_manager.py 2>&1 >/dev/null) 
    
    echo $DATABRICKS_CLUSTER_ID
    echo $LOCAL_DATABRICKS_CLUSTER_ID
    echo "does it work?"
-   
-   echo "##vso[task.setvariable variable=existing_databricks_cluster_id]$DATABRICKS_CLUSTER_ID"  
   env:
     DATABRICKS_ACCESS_TOKEN: $(DATABRICKS_ACCESS_TOKEN)
   failOnStderr: 'true'
