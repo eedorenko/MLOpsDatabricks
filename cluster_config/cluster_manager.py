@@ -168,6 +168,7 @@ def main():
         )
 
     sys.stdout.write(cluster.id)
+    print("The cluster id is %s" % (cluster.id))
     os.environ["DATABRICKS_CLUSTER_ID"] = cluster.id
 
 
