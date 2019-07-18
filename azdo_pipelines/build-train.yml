@@ -67,3 +67,4 @@ steps:
   failOnStderr: 'true'
   displayName: 'Terminate Databricks Cluster'
   enabled: 'false'
+  
