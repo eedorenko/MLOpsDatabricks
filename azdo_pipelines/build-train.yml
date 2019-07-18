@@ -24,6 +24,7 @@ steps:
    
    echo $DATABRICKS_CLUSTER_ID
    echo $LOCAL_DATABRICKS_CLUSTER_ID
+   echo "does it work?"
    
    echo "##vso[task.setvariable variable=existing_databricks_cluster_id]$DATABRICKS_CLUSTER_ID"  
   env:
