@@ -26,7 +26,7 @@ def parse_arguments():
 
 
 def terminate_cluster(
-    cluster,
+    cluster: DatabricksCluster,
     databricks_access_token,
     libraries_config_path,
     permanent: bool
