@@ -4,6 +4,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+container: dtzar/conda3mlops:latest  
+
 variables:
   SOURCES_DIR: $[coalesce(variables['SOURCES_DIR_OVERRIDE'], '$(Build.SourcesDirectory)')]
   TRAIN_SCRIPT_PATH: $[coalesce(variables['TRAIN_SCRIPT_PATH_OVERRIDE'], 'src/train/train.py')]
