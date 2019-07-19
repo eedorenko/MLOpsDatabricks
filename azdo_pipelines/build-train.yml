@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-container: dtzar/conda3mlops:latest  
+container: eugenefedorenko/mlopsbuildagent:latest  
 
 variables:
   SOURCES_DIR: $[coalesce(variables['SOURCES_DIR_OVERRIDE'], '$(Build.SourcesDirectory)')]
