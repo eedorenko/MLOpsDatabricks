@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-container: eugenefedorenko/mlopsbuildagent:latest  
+container: pepsimlamlcr.azurecr.io/mlopsbuildagent:latest  
 
 variables:
   SOURCES_DIR: $[coalesce(variables['SOURCES_DIR_OVERRIDE'], '$(Build.SourcesDirectory)')]
